@@ -1,9 +1,9 @@
 var express = require('express');
-// var path = require('path');
+var path = require('path');
 // // var favicon = require('serve-favicon');
 // var logger = require('morgan');
 // var cookieParser = require('cookie-parser');
-// var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 // var config = require('config')
 
 var partials = require('express-partials');
@@ -59,7 +59,7 @@ app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+// app.use(logger('dev'));
 // app.use(bodyParser.json({
 // 	verify: function(req, res, buf, encoding) {
 // 		req.rawBody = buf.toString(encoding);
