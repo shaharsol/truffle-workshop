@@ -14,10 +14,7 @@ contract OwnableTitles is Ownable{
 
   //
   function addTitle(string title) public onlyOwner {
-    /*require(owner == msg.sender);*/
-
     titles.push(title);
-
   }
 
   function getTitle(uint256 idx) public view returns (string) {

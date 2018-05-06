@@ -10,14 +10,14 @@ contract Titles {
     owner = _owner;
   }
 
-  //
-  modifier onlyOwner() {
+  // modifiers
+  /*modifier onlyOwner() {
     require(msg.sender == owner);
-    /*require(isActive == true);*/
     _;
-  }
+  }*/
 
-  function addTitle(string title) public {
+  // public methods
+  function addTitle(string title) public /*onlyOwner*/{
     /*require(owner == msg.sender);*/
 
     titles.push(title);
