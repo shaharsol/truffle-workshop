@@ -1,23 +1,19 @@
 pragma solidity ^0.4.17;
 
-contract Titles {
+import './Ownable.sol';
+
+contract OwnableTitles is Ownable{
   // That's the data
-  address owner;
   string[] titles;
 
   // constructor
-  function Titles(address _owner) public {
-    owner = _owner;
+  function OwnableTitles(address _owner) public
+  Ownable(_owner)
+  {
   }
 
   //
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    /*require(isActive == true);*/
-    _;
-  }
-
-  function addTitle(string title) public {
+  function addTitle(string title) public onlyOwner {
     /*require(owner == msg.sender);*/
 
     titles.push(title);
